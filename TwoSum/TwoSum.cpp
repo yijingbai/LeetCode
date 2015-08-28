@@ -13,7 +13,8 @@ public:
         map<int, int> num_index_map;
         for (int i = 0; i < nums.size(); i++) {
             int current = nums[i];
-            if (num_index_map.end() != num_index_map.find(target - current)) {
+            if (num_index_map.end() !=
+                    num_index_map.find(target - current)) {
                 vector<int> res;
                 res.push_back(num_index_map[target - current] + 1);
                 res.push_back(i + 1);
