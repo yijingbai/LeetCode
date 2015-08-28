@@ -16,5 +16,5 @@ But we still face two problem:
 1. how to judge whether a character is alphanumric or not.
 2. how to change cases in c++.
 
-Then I found two functions: isalnum() and tolower(), the isalnum is in ctype.h, which function
+Then I found two functions: `isalnum()` and `tolower()`, the isalnum is in `ctype.h`, which function
 is to judge whether the input is the alphanumric. The other is to change the cases.
