@@ -3,6 +3,7 @@
 ######Tag: `Array`
 ######Difficulty: `Medium`
 This Problem is difficult for me at first. But using 2 pointer could solve this problem.
+
 1. Sort the array.
 2. Left k be the first element and i = k + 1, j = nums.size() -1. This definition is for
 we get nums[k] + nums[i] + nums[j] and check whether it is zero.
