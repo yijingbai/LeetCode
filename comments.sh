@@ -95,9 +95,9 @@ fi
 
 #adding the Copyright Comments
 if  ! grep -Fq  "${COMMENT_TAG} Author :" $source_file ; then
-    sed -i '1i\'"${COMMENT_TAG} Source : ${leetcode_url}" $source_file
-    sed -i '2i\'"${COMMENT_TAG} Author : ${AUTHOR}" $source_file
-    sed -i '3i\'"${COMMENT_TAG} Date   : ${current_time}\n" $source_file
+    gsed -i '1i\'"${COMMENT_TAG} Source : ${leetcode_url}" $source_file
+    gsed -i '2i\'"${COMMENT_TAG} Author : ${AUTHOR}" $source_file
+    gsed -i '3i\'"${COMMENT_TAG} Date   : ${current_time}\n" $source_file
 fi
 
 #grab the problem description and add the comments
@@ -108,18 +108,18 @@ if [ -z "${xidel}" ]; then
 fi
 
 # using xidel grab the problem description
-# 1) the `fold` command is used to wrap the text at centain column
-# 2) the last two `sed` commands are used to add the comments tags
+# 1) the `fold` command is ugsed to wrap the text at centain column
+# 2) the last two `gsed` commands are ugsed to add the comments tags
 case $FILE_EXT in
     .cpp )      xidel ${leetcode_url} -q -e "css('div.question-content')"  | \
-                    grep -v '                ' |sed '/^$/N;/^\n$/D'  | fold -w 85 -s |\
-                    sed 's/^/ * /' | sed "1i/*$(printf '%.0s*' {0..80}) \n * " | \
-                    sed "\$a \ $(printf '%.0s*' {0..80})*/\n" > /tmp/tmp.txt
+                    grep -v '                ' |gsed '/^$/N;/^\n$/D'  | fold -w 85 -s |\
+                    gsed 's/^/ * /' | gsed "1i/*$(printf '%.0s*' {0..80}) \n * " | \
+                    gsed "\$a \ $(printf '%.0s*' {0..80})*/\n" > /tmp/tmp.txt
                 ;;
     .sh )      xidel ${leetcode_url} -q -e "css('div.question-content')"  | \
-                    grep -v '                ' |sed '/^$/N;/^\n$/D'  | fold -w 85 -s| \
-                    sed 's/^/# /' | sed "1i#$(printf '%.0s#' {0..80}) \n# " | \
-                    sed "\$a \#$(printf '%.0s#' {0..80})\n" > /tmp/tmp.txt
+                    grep -v '                ' |gsed '/^$/N;/^\n$/D'  | fold -w 85 -s| \
+                    gsed 's/^/# /' | gsed "1i#$(printf '%.0s#' {0..80}) \n# " | \
+                    gsed "\$a \#$(printf '%.0s#' {0..80})\n" > /tmp/tmp.txt
                 ;;
       * )       echo "Bad file extension!"
                 exit 1;
@@ -127,7 +127,7 @@ case $FILE_EXT in
 esac
 
 #insert the problem description into the source file, and remove it
-sed -i '4 r /tmp/tmp.txt' ${source_file}
+gsed -i '4 r /tmp/tmp.txt' ${source_file}
 rm -f /tmp/tmp.txt
 if [[ ! -d ${source_folder} ]]; then
     mkdir ${source_folder}
