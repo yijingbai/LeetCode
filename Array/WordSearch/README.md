@@ -1,6 +1,6 @@
-#####(Word Search)[https://leetcode.com/problems/word-search/]
+#(Word Search)[https://leetcode.com/problems/word-search/]
 ###### Tag: `Array`
-######
+###### Difficuty: `Medium`
 This question is a typical backtracking problem. The my initial way is to is depth first seach,
 however, found it is very difficult to implement it, my code is like:
 
