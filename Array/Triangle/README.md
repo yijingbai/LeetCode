@@ -1,4 +1,4 @@
-#(Triangle)[https://leetcode.com/problems/triangle/]
+#[Triangle](https://leetcode.com/problems/triangle/)
 ###### Tag: `Array, DP`
 ###### Difficulty: `Medium`
 It is a typical dp question. However, I do not come up at first time.
