@@ -6,7 +6,7 @@ LEETCODE_URL=https://leetcode.com/problems/
 LEETCODE_NEW_URL=https://leetcode.com/problems/
 LEETCODE_OLD_URL=https://oj.leetcode.com/problems/
 COMMENT_TAG="//"
-FILE_EXT=".cpp"
+FILE_EXT=".java"
 
 function usage()
 {
@@ -111,6 +111,12 @@ fi
 # 1) the `fold` command is used to wrap the text at centain column
 # 2) the last two `sed` commands are used to add the comments tags
 case $FILE_EXT in
+    .java )      xidel ${leetcode_url} -q -e "css('div.question-content')"  | \
+                    grep -v '                ' |sed '/^$/N;/^\n$/D'  | fold -w 85 -s |\
+                    sed 's/^/ * /' | sed "1i/*$(printf '%.0s*' {0..80}) \n * " | \
+                    sed "\$a \ $(printf '%.0s*' {0..80})*/\n" > /tmp/tmp.txt
+                ;;
+
     .cpp )      xidel ${leetcode_url} -q -e "css('div.question-content')"  | \
                     grep -v '                ' |sed '/^$/N;/^\n$/D'  | fold -w 85 -s |\
                     sed 's/^/ * /' | sed "1i/*$(printf '%.0s*' {0..80}) \n * " | \
