@@ -6,7 +6,7 @@ LEETCODE_URL=https://leetcode.com/problems/
 LEETCODE_NEW_URL=https://leetcode.com/problems/
 LEETCODE_OLD_URL=https://oj.leetcode.com/problems/
 COMMENT_TAG="//"
-FILE_EXT=".java"
+FILE_EXT=".cpp"
 
 function usage()
 {
@@ -143,6 +143,6 @@ echo "#[${source_folder}](${leetcode_url})" >> ${source_folder}/README.md
 echo "######No: \`\`"  >> ${source_folder}/README.md
 echo "######Tag: \`\`" >> ${source_folder}/README.md
 echo "######Difficulty: \`\`" >> ${source_folder}/README.md
-mv ${source_folder} Array
+mv ${source_folder} Tree
 echo "${source_file} updated !"
 
