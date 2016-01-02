@@ -11,3 +11,20 @@ the new dummy head.
 
 So If we face the problem like inplace manipulate, we'd better use iterative approach instead of the recursion
 approach.
+
+And there is an better approach from https://leetcode.com/discuss/30719/my-short-post-order-traversal-java-solution-for-share
+, which is much better than mine:
+
+```
+private TreeNode prev = null;
+
+public void flatten(TreeNode root) {
+    if (root == null)
+        return;
+    flatten(root.right);
+    flatten(root.left);
+    root.right = prev;
+    root.left = null;
+    prev = root;
+}
+```
