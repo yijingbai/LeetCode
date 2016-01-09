@@ -14,4 +14,4 @@ for the left part. Otherwise, we find in the left part.
 
 The second approach is Newton's method. The explanation is from wikipidia:
 
-![image]()
+![image](https://github.com/yijingbai/LeetCode/raw/master/Math/Sqrtx/wikipidia.png)
