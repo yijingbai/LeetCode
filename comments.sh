@@ -143,6 +143,6 @@ echo "#[${source_folder}](${leetcode_url})" >> ${source_folder}/README.md
 echo "######No: \`\`"  >> ${source_folder}/README.md
 echo "######Tag: \`\`" >> ${source_folder}/README.md
 echo "######Difficulty: \`Medium\`" >> ${source_folder}/README.md
-mv ${source_folder} String
+mv ${source_folder} BinarySearch
 echo "${source_file} updated !"
 
