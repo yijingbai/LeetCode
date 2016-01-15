@@ -64,3 +64,5 @@ Accessing A(9) actually accesses nums[8].
 
 Props to apolloydy's solution, I knew the partitioning algorithm already but I didn't know the name. And apolloydy's idea to partition to reverse order happened to make the index rewiring simpler.
 ```
+In addition, there is a good explanton about three-way-partition on wikipidia:
+https://en.wikipedia.org/wiki/Dutch_national_flag_problem#Pseudocode
