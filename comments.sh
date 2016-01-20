@@ -141,8 +141,8 @@ fi
 mv ${source_file} ${source_folder}
 echo "#[${source_folder}](${leetcode_url})" >> ${source_folder}/README.md
 echo "######No: \`\`"  >> ${source_folder}/README.md
-echo "######Tag: \`Array\`" >> ${source_folder}/README.md
+echo "######Tag: \`HashMap\`" >> ${source_folder}/README.md
 echo "######Difficulty: \`Hard\`" >> ${source_folder}/README.md
-mv ${source_folder} Array
+mv ${source_folder} HashMap
 echo "${source_file} updated !"
 
