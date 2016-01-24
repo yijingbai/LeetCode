@@ -1,4 +1,4 @@
-#[MinimumWindowSubstring](https://leetcode.com/problems/minimum-window-substring/)
-######No: ``
+#[\*MinimumWindowSubstring](https://leetcode.com/problems/minimum-window-substring/)
+######No: `76`
 ######Tag: `HashMap`
 ######Difficulty: `Hard`
