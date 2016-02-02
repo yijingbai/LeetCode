@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-AUTHOR="Yijing Bai"
+ AUTHOR="Yijing Bai"
 LEETCODE_URL=https://leetcode.com/problems/
 LEETCODE_NEW_URL=https://leetcode.com/problems/
 LEETCODE_OLD_URL=https://oj.leetcode.com/problems/
