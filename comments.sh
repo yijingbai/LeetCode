@@ -143,6 +143,6 @@ echo "#[${source_folder}](${leetcode_url})" >> ${source_folder}/README.md
 echo "######No: \`\`"  >> ${source_folder}/README.md
 echo "######Tag: \`BFS\`" >> ${source_folder}/README.md
 echo "######Difficulty: \`Hard\`" >> ${source_folder}/README.md
-mv ${source_folder} BFS
+mv ${source_folder} Microsoft
 echo "${source_file} updated !"
 
